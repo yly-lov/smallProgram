@@ -1,0 +1,16 @@
+<!--导航条-->
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view> 
+<!--热门-->
+<view hidden="{{currentTab!==0}}"> 
+  <include src="./hot/hot.wxml"/>
+</view> 
+<!--关注-->
+<view hidden="{{currentTab!==1}}"> 
+ <include src="./follow/follow.wxml"/>
+</view>
+<!--消息-->
+<view hidden="{{currentTab!==2}}">
+  <include src="./info/info.wxml"/>
+</view>

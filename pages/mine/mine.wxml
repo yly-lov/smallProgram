@@ -1,0 +1,93 @@
+ <import src="../../template/nav.wxml" />
+ <view class="info">
+ <!-- 顶部轮播图 -->
+    <swiper indicator-dots="{{indicatorDots}}"  
+           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" class="swper">  
+         <block wx:for="{{imgUrls}}" wx:key="{{item}}">  
+           <swiper-item>  
+              <navigator url="{{item.link}}" hover-class="navigator-hover">  
+               <image src="{{item.url}}" class="slide-image"/>  
+            </navigator>  
+           </swiper-item>  
+         </block>  
+    </swiper> 
+     <!--轮播图上面的返回按钮  -->
+    <view class="shares">
+        <text class="iconfont icon-zuojiantou" bindtap="callback"></text>
+        <text class="name">{{companyName}}</text>
+    </view>
+    <!-- 轮播图下面的官方认证 -->
+    <view class="rz">
+        <image src="/images/home.png"></image>
+        <view class="rzinfo">
+            <text class="companyName">{{companyName}}</text>
+            <text class="companyNum">{{companyNum}}</text>
+            <text wx:if="{{isrz}}" class="isrz"><text class="iconfont icon-renzheng" style="font-size:50rpx"></text>已认证</text>
+            <text wx:if="{{!isrz}}" class="isrz"><text class="iconfont icon-weirenzheng"></text>已认证</text>
+             <text wx:if="{{xhicon}}" class="iconfont icon-xihuan2" style='float:right' bindtap='xh'></text>
+             <text wx:if="{{!xhicon}}" class="iconfont icon-xihuan red" style='float:right' bindtap='xh'></text>
+             <text class="gzrs" style='float:right' font-size="24rpx"> 
+              共{{gzrs}}关注
+             </text>
+            <text class="time">
+              {{time}}
+            </text>
+        </view>
+    </view>
+    <!-- 股份价格比例 -->
+    <view class="price">
+      <view class="first">
+          <text class="proportion">{{proportion}}</text>
+          <text class="xsicon"></text>
+          <text class="xs">{{xs}}</text>
+          <text class="percent">{{percent}}</text>
+      </view>
+      <view class="second view">
+          <text class="maxPriceText text">最高价</text>
+          <text class="maxPrice">{{maxPrice}}</text>
+          <text class="jk text">今开</text>
+          <text class="jknum common">{{jknum}}</text>
+          <text class="hsl text">换手率</text>
+          <text class="hslper common">{{hslper}}</text>
+      </view>
+      <view class="third view">
+          <text class="minPriceTetx text">最低价</text>
+          <text class="minprice">{{minprice}}</text>
+          <text class="zs text">昨收</text>
+          <text class="zsnum common">{{zsnum}}</text>
+          <text class="cje text">成交额</text>
+          <text class="cjenum common">{{cjenum}}</text>
+      </view>
+      <view class="fourth view">
+          <text class="succprice text">成交均价</text>
+          <text class="succpricenum common">{{succpricenum}}</text>
+          <text class="succcounttext text">成交量</text>
+          <text class="succcount common">{{succcount}}</text>
+      </view>
+    </view>
+    <view class="shareholdersmeet" bindtap="meet">
+      <image src="{{item}}"></image>
+    </view> 
+    <view class="ir">
+      <text class="title">IR团队</text>
+      <view class="irdesc">
+        <view class="introduce" wx:for="{{irteam}}" wx:key="index">
+          <view class="irhead">
+            <image class="head" src="{{item.head}}"></image>
+          </view>
+          <view class="irtext">
+            <text class="name">{{item.headname}}</text>
+            <text class="position">
+              {{item.positiondesc}}
+            </text>
+          </view>
+        </view>
+      </view>  
+    </view>
+    <!-- footbar的实现 --->
+ </view> 
+ <footerbar id="footerbar">
+    title="分享",
+    bind:share="_share"
+    ico="icon-shoucang"
+ </footerbar>

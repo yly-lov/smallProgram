@@ -1,0 +1,204 @@
+/* pages/mine/mine.wxss */
+/* 轮播图图片的大小 */
+.slide-image{
+  width: 100%;
+  height: 1000rpx;
+}
+.info{
+  position: relative;
+}
+.shares{
+  width: 100%;
+  height: 120rpx;
+  position: absolute;
+  background: rgba(233, 226, 226, 0.5);
+  top: 0;
+  left:0;
+  color: rgb(27, 22, 22);
+  line-height: 120rpx;
+}
+.shares .iconfont{
+  margin-left: 20rpx;
+  font-size: 50rpx;
+}
+.shares .name{
+  text-indent: 90rpx;
+}
+.rz{
+  width: 100%;
+  height: 120rpx;
+  border-bottom: 3rpx solid gray;
+  display: inline-block;
+}
+.rz image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 10rpx;
+  /* margin-right: 20rpx; */
+}
+.rzinfo{
+  margin-top: 20rpx;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 30rpx;
+}
+/* 认证公司名字的样式设定 */
+.companyName{
+  font-size: 40rpx;
+}
+/* 公司代码编号的样式设定 */
+.companyNum{
+  color: #cccccc;
+  /* margin-left: 20rpx; */
+}
+/* 是否认证的设定 */
+.isrz{
+  color: orange;
+  /* margin-left: 30rpx; */
+}
+/* 公司认证的时间 */
+.time{
+  color:#cccccc;
+}
+ .red{
+   color: red;
+ }
+ .price{
+   width: 98%;
+   height: 350rpx;
+   background: rgba(141, 207, 193, 0.24);
+   margin: 30rpx auto 30rpx auto;
+   border-radius: 20rpx;
+ }
+ .price .first{
+   width: 100%;
+   height: 140rpx;
+   color: rgb(155, 70, 70);
+   line-height: 140rpx;
+ }
+ .price .first .proportion{
+   font-size: 80rpx;
+ }
+  .price .first text{
+    margin-right: 40rpx;
+  }
+  .price text{
+    margin-right: 40rpx;
+    margin-left: 10rpx;
+    font-size: 30rpx;
+  }
+  .price .common{
+    color: #333c33;
+  }
+  .price .second .maxPrice{
+    color:rgb(155, 70, 70);
+  }
+  .price .third .minprice{
+    color: green;
+  }
+  .price .text{
+    color: gray;
+  }
+  .price .view{
+   width: 100%;
+   height: 70rpx;
+   line-height: 70rpx;
+ }
+  .shareholdersmeet image{
+    width: 95%;
+    height: 300rpx;
+    margin-left: 20rpx;
+    border-radius: 10rpx;
+  }
+  .ir{
+    width: 100%;
+    height: 70rpx;
+    border-bottom: 3rpx solid rgb(177, 159, 159);
+    line-height: 70rpx;
+    text-indent: 20rpx;
+    margin-bottom:600rpx;
+  }
+  .ir .title{
+    font-size: 32rpx;
+  }
+  .irdesc{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* IR团队的样式 */
+  .introduce{
+    width: 46%;
+    height: 180rpx;
+    background: rgba(176, 196, 222, 0.247);
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    padding-top: 20rpx;
+  }
+  .introduce .irhead{
+    float: left;
+  }
+  .introduce .irhead .irtext{
+    float: left;
+  }
+  .introduce .irtext .name{
+    font-size: 30rpx;
+  }
+  .introduce .irtext .position{
+    color: gray;
+    font-size: 23rpx;
+  }
+  .introduce .head{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin-right: 10rpx;
+  }
+  /* footerbar的样式 */
+  .footerbar{
+    width: 100%;
+    height:120rpx;
+    background: rgb(204, 157, 86);
+    position: fixed;
+    bottom:0rpx;
+    display: flex;
+  }
+  .footerbar .nav_box{
+    flex: 1;
+  }
+  .footerbar .nav_box .right_nav{
+    display: flex;
+  }
+  .footerbar .left{
+    text-align: center;
+  }
+  .footerbar .right{
+    display: flex;
+  }
+  /* 分享button样式 */
+  .share{
+    width: 50%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background: rgb(219, 212, 212);
+    font-size: 40rpx;
+    color:#555e55;
+    border: 3rpx solid #828d82;
+    margin-top: 20rpx;
+    border-radius: 30rpx;
+    display: inline-block;
+  }
+  .footerbar .nav_link{
+    display: inline-block;
+    /* display: flex;
+     */
+     flex:1;
+  }
+  .footerbar .nav_link .idx_ico{
+    margin-left: 23rpx;
+    color: #2b2e2b;
+  }
+  
+  .footerbar .nav_link .txt{
+    font-size: 32rpx;
+    color: #555e55;
+  }

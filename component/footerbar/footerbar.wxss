@@ -1,0 +1,51 @@
+/* component/footerbar/footerbar.wxss */
+/* component/footerbar.wxss */
+/* footerbar的样式 */
+  .footerbar{
+    width: 100%;
+    height:120rpx;
+    background: rgb(204, 157, 86);
+    position: fixed;
+    bottom:0rpx;
+    display: flex;
+  }
+  .footerbar .nav_box{
+    flex: 1;
+  }
+  .footerbar .nav_box .right_nav{
+    display: flex;
+  }
+  .footerbar .left{
+    text-align: center;
+  }
+  .footerbar .right{
+    display: flex;
+  }
+  /* 分享button样式 */
+  .share{
+    width: 50%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background: rgb(219, 212, 212);
+    font-size: 40rpx;
+    color:#555e55;
+    border: 3rpx solid #828d82;
+    margin-top: 20rpx;
+    border-radius: 30rpx;
+    display: inline-block;
+  }
+  .footerbar .nav_link{
+    display: inline-block;
+    /* display: flex;
+     */
+     flex:1;
+  }
+  .footerbar .nav_link .idx_ico{
+    margin-left: 23rpx;
+    color: #2b2e2b;
+  }
+  
+  .footerbar .nav_link .txt{
+    font-size: 32rpx;
+    color: #555e55;
+  }

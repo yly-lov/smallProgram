@@ -1,0 +1,17 @@
+<!--component/footerbar/footerbar.wxml-->
+ <view class="footerbar">
+  <view class="left nav_box">
+    <button class="share" bindtap="_share">{{title}}</button>
+  </view>
+  <view class="right nav_box">
+    <block wx:for="{{navData}}" wx:key="" class="right_nav">
+      <view class="nav_link" bindtap="{{item.fn}}">
+        <text class="iconfont {{ico}} del_ico idx_ico"></text>
+        <text class="txt">
+          {{item.name}}
+        </text>
+      </view>
+    </block>
+  </view>
+</view>
+

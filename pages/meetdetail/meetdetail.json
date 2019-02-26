@@ -1,0 +1,8 @@
+{
+    "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "股东大会",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+}

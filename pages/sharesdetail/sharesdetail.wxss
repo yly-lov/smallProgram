@@ -1,0 +1,278 @@
+/* pages/sharesdetail/sharesdetail.wxss */
+.tab-panel {
+  margin-bottom: 500rpx;
+}
+.tab-panel .time-report{
+  width: 100%;
+  height: 80rpx;
+  color: red;
+  text-indent: 20rpx;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.tab{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.tab-nav{
+	height: 80rpx;
+	background: #fff;
+	border-bottom: 1rpx solid #ddd;
+	display: flex;
+	line-height: 79rpx;
+}
+.tab-nav text{
+	display: block;
+	flex: 1;
+	text-align: center;
+  position: relative;
+	/* width: 25%; */
+}
+.tab-nav text.active{
+	color: #f7982a;
+}
+.tab-nav text.active:after{ 
+  content: "";
+  display: block;
+  height: 4rpx;
+  width: 100%;
+  background: #f7982a;
+  position: absolute;
+  bottom: 0;
+  left: 5rpx;
+  transition: all 0.3s;
+  }
+.tab-content{
+	width: 400%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+}
+.tab-content .tab-panel{
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	flex: 1;
+}
+.test-list{
+	padding: 0 20rpx;
+}
+.question-list{
+	padding: 20rpx;
+}
+.test-item{
+	border-bottom: 1rpx solid #ddd;
+	padding: 20rpx 0;
+  position: relative;
+}
+.test-item-t{
+	font-size: 34rpx;
+}
+.test-item-b{
+	font-size: 30rpx;
+	color: rgb(83, 77, 77);
+	display: -webkit-box;
+  width: 100%;
+}
+.left{
+  width: 70%;
+  float: left;
+}
+.right{
+  float: right;
+  width: 200rpx;
+  height: 200rpx;
+}
+.left-time{
+  position: absolute;
+  bottom: 20rpx;
+  left:30rpx;
+  color: #2b2e2b;
+}
+.test-item .avatar{
+  width:100rpx;
+  height: 100rpx;
+  margin-right: 30rpx;
+  margin-bottom: 50rpx;
+  float: left;
+}
+.test-item .text-box{
+  font-size: 30rpx;
+  color: rgb(20, 17, 17);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+/* 活动样式 */
+.actTime{
+  color: #98a198;
+  text-align: center;
+  font-size: 32rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  line-height: 70rpx;
+}
+/* 踏演 */
+.actImg{
+  float: right;
+  width: 300rpx;
+  height:200rpx;
+}
+.performance{
+  width: 55%;
+  float: left;
+}
+/* 活动日期的字体样式 */
+.actDate{
+  color: gray;
+}
+/* 活动内容的字体样式 */
+.actContent{
+  color: rgb(14, 9, 9);
+}
+.actLeft{
+  display: inline-block;
+  padding: 20rpx 0;
+  position: relative;
+}
+/* 机构调研 */
+
+/*机构调研说明 */
+.actSearch{
+  color: #2b2e2b;
+  height:70rpx;
+  line-height: 70rpx;
+}
+/*机构调研形式 */
+.actSearch-content{
+  color: #828d82;
+  display: flex;
+  height:50rpx;
+  line-height: 50rpx;
+}
+/* 机构调研时间 */
+.searchTime{
+  width: 70%;
+  text-align: center;
+}
+/* 简介样式 */
+.td {
+    width:50%;
+    min-height: 90rpx;
+}
+.tr {
+  display: flex;
+  min-height: 90rpx;
+  border-bottom: 0;
+}
+.companyIntroTitle{
+  color: #828d82;
+}
+/*文本描述  */
+.conts{
+  font-size: 28rpx;
+  line-height:50rpx;
+  /*关键属性（必须有的）  */
+  display: -webkit-box; 
+  /*规定子元素的排列方向 */
+  -webkit-box-orient: vertical; 
+   /*限制文本显示的行数  */
+  -webkit-line-clamp:3;
+  /*实现多余的文字隐藏并用省略号来代表被隐藏的文字  */
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+/*切换  */  
+ .state{
+  color: rgb(51, 152, 235);
+  float: right;
+  font-size: 30rpx;
+  margin: 30rpx;
+}
+/* 董监高简介样式 */
+.directorsIntro{
+  display: flex;
+  margin-top: 30rpx;
+}
+.directorsIntro .avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.directorsIntro .content{
+  width: 70%;
+  margin-left: 30rpx;
+}
+/* 董事名字 */
+.directorName{
+  color: black;
+  
+}
+/* 董事职称 */
+.positionName{
+  color: red;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+/* 董事薪水 */
+.positionSalary{
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+/* 董事职位描述 */
+.positionDesc{
+  color:#828d82;
+  font-size: 32rpx;
+  margin-top: 30rpx;
+}
+.test::after{display: block;height: 0;clear: both;content: ''}
+/* footerbar的样式 */
+  .footerbar{
+    width: 100%;
+    height:120rpx;
+    background: rgb(204, 157, 86);
+    position: fixed;
+    bottom:0rpx;
+    display: flex;
+  }
+  .footerbar .nav_box{
+    flex: 1;
+  }
+  .footerbar .nav_box .right_nav{
+    display: flex;
+  }
+  .footerbar .left{
+    text-align: center;
+  }
+  .footerbar .right{
+    display: flex;
+  }
+  /* 分享button样式 */
+  .share{
+    width: 50%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background: rgb(219, 212, 212);
+    font-size: 40rpx;
+    color:#555e55;
+    border: 3rpx solid #828d82;
+    margin-top: 20rpx;
+    border-radius: 30rpx;
+    display: inline-block;
+  }
+  .footerbar .nav_link{
+    display: inline-block;
+    /* display: flex;
+     */
+     flex:1;
+  }
+  .footerbar .nav_link .idx_ico{
+    margin-left: 23rpx;
+    color: #2b2e2b;
+  }
+  .footerbar .nav_link .txt{
+    font-size: 32rpx;
+    color: #555e55;
+  }

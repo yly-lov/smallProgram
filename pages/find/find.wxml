@@ -1,0 +1,11 @@
+<!--pages/find/find.wxml-->
+<view class="swiper-container">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+        <block wx:for="{{imgUrls}}" wx:key="unique">
+          <swiper-item>
+    DDDDD
+            <image src="{{item}}" class="img" bindtap="swipclick" />
+          </swiper-item>
+        </block>
+      </swiper>
+</view>

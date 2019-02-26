@@ -1,0 +1,70 @@
+<!--pages/meetdetail/meetdetail.wxml-->
+<view class="go_back">
+  <text class="iconfont icon-zuojiantou back" bindtap="back"></text>
+  <text class="meetdetail">{{meet_detail}}</text>
+</view>
+<!-- 基本信息-->
+<view class="basicinfo">
+  <text class="title">基本信息</text>
+</view>
+<!-- 表格的实现 -->
+<view class="table">
+   <block wx:for="{{listData}}" wx:key="{{code}}">
+      <view class="tr">
+        <view class="td name">{{item.name}}</view>
+        <view class="td">{{item.text}}</view>
+      </view>
+    </block>
+</view> 
+<!-- 审议内容 -->
+<view class="meetbox">
+  <view class="meet_title">
+  <text class="title">审议内容</text>
+  </view>
+  <view class="meet_content">
+    <block wx:for="{{content_1}}" wx:for-item="item" wx:for-index="index" wx:key="id">
+      <view class="contentfirst">
+          {{index+1}}{{item.name}}
+      </view>
+      <view wx:for="{{item.twodata}}" wx:for-item="twodata" wx:key="id" wx:for-index="twoindex" class="contentsecond">
+          {{index+1}}.{{twoindex+1}}{{twodata.name}}
+      </view>
+    </block>
+  </view>
+</view>
+<!-- 附件 -->
+<view class="attachmentbox">
+  <view class="attachment">
+  <text>附件</text>
+  </view>
+  <view class="document attachmentview">
+    <icon class="iconfont icon-document documenticon"></icon>
+    <text class="attachmenttext">{{document}}</text>
+  </view>
+  <view class="pdf attachmentview">
+    <icon class="iconfont icon-pdf pdficon"></icon>
+    <text class="attachmenttext">{{pdf}}</text>
+  </view>
+</view>
+<!-- footerbar -->
+ <view class="nav_link" bindtap="{{fn}}">
+   <view class="left nav_box">
+    <view class="left_box">
+      <text class="iconfont icon-shoucang"></text>
+      <text class="left_box">
+        收藏
+      </text>
+    </view>
+    <view class="left_box">
+      <text class="iconfont icon-fenxiang"></text>
+      <text>
+        分享
+      </text>
+    </view>
+   </view>
+   <view class="right nav_box">
+    <text>我要出席</text>
+   </view>
+</view>
+
+

@@ -1,0 +1,9 @@
+<!--template/nav/nav.wxml-->
+<template name="nav">
+      <view class="nav_link" bindtap="{{fn}}">
+          <icon class="iconfont {{ico}} del_ico idx_ico"></icon>
+          <text class="txt">
+            {{name}}
+          </text>
+      </view>
+</template>

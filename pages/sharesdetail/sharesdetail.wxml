@@ -1,0 +1,143 @@
+
+<import src="../../template/nav.wxml" />
+<view class="container">
+	<view class="container-body">
+		<view class="tab">
+			<view class="tab-nav">
+				<text wx:for="{{tabnav.tabitem}}" bindtap="setTab" class="{{showtab==index?'active':''}}" data-tabindex="{{index}}" data-type="{{item.type}}" wx:key="{{item.type}}">{{item.text}}</text>
+				<view class="tab-line" style="width:{{100/tabnav.tabnum}}%;transform:translateX({{100*showtab}}%);"></view>
+			</view>
+			<view class="tab-content" style="" bindtouchstart="scrollTouchstart" bindtouchmove="scrollTouchmove" bindtouchend="scrollTouchend" style="width: {{tabnav.tabnum*100}}%;transform:translateX(-{{showtab*100/tabnav.tabnum}}%);margin-left: {{marginleft}}px;">
+      <!-- 公告 -->
+				<view class="tab-panel">
+          <view class="time-report"><text>定期报告</text></view>
+					<view class="test-list">
+						<view class="test-item test" wx:for="{{testdata1_1}}" wx:key="{{item.id}}">
+              <view class="left test-item-b">
+                <text class="left-text">{{item.text_1}}</text>
+                <text class="left-time">
+                  {{item.time_1}}
+                </text> 
+              </view>
+              <image src="{{item.url_1}}" class="right"></image>
+						</view>
+					</view>
+          <view class="time-report"><text>公司治理</text></view>
+          <view class="test-list">
+						<view class="test-item test" wx:for="{{testdata1_1}}" wx:key="{{item.id}}">
+              <view class="left">
+                <text class="left-text">{{item.text_2}}</text>
+                <text class="left-time">
+                  {{item.time_2}}
+                </text> 
+              </view>
+              <image src="{{item.url_2}}" class="right"></image>
+						</view>
+					</view>
+          <view class="time-report"><text>其他</text></view>
+          <view class="test-list">
+						<view class="test-item test" wx:for="{{testdata1_1}}" wx:key="{{item.id}}">
+              <view class="left test-item-b">
+                <text class="left-text">{{item.text_3}}</text>
+                <text class="left-time">
+                  {{item.time_3}}
+                </text> 
+              </view>
+              <image src="{{item.url_3}}" class="right"></image>
+						</view>
+					</view>
+				</view>
+      <!-- 活动 -->
+				<view class="tab-panel">
+          <view class="time-report"><text>股东大会</text></view>
+					<view class="test-list">
+						<view class="test-item" wx:for="{{testdata2}}" wx:key="{{item.id}}">
+							<view class="test-item-b">{{item.text}}</view>
+              <view class="actTime">{{item.time}}</view>
+						</view>
+					</view>
+          <view class="time-report"><text>踏演</text></view>
+          <view class="test-list">
+						<view class="actLeft test" wx:for="{{testdata2}}" wx:key="{{item.id}}">
+              <view class="test-item-b performance">
+                <text class="actDate">活动日期{{item.actDate}}</text>
+                <text class="actContent">
+                  {{item.actContent}}
+                </text> 
+              </view>
+              <image src="{{item.url}}" class="actImg"></image>
+						</view>
+            <view class="time-report"><text>机构调研</text></view>
+            <view class="test-item test" wx:for="{{testdata2}}" wx:key="{{item.id}}">
+              <view class="test-item-b actSearch">
+                <text>{{item.actName}}</text>
+              </view>
+              <view class="test-item-b actSearch-content">
+                    <text>{{item.actform}}</text>
+                    <view class="searchTime"><text>{{item.actresearchDate}}</text></view>
+                </view>
+						</view>
+					</view>
+				</view>
+      <!-- 问答 -->
+				<view class="tab-panel">
+					<view class="test-list">
+						<view class="test-item" wx:for="{{testdata3}}" wx:key="{{item.id}}">
+                <view class="ask test">
+                  <image src="{{item.avatar}}" class="avatar"></image>
+                  <view class="rightimg">
+                       <text class="text-box">{{item.ask}}</text>
+                  </view>
+                </view>
+                <view class="question test">
+                  <image src="{{item.config}}" class="avatar"></image>
+                  <view class="rightimg">
+                      <text class="text-box">{{item.question}}</text>
+                  </view>
+                </view>
+						</view>
+					</view>
+				</view>
+      <!-- 简介 -->
+				<view class="tab-panel">
+          <view class="time-report"><text>公司简介</text></view>
+					<view class="test-list">
+						<view  wx:for="{{testdata4}}" wx:key="{{item.id}}">
+              <view class="tr">
+                <view class="td companyIntroTitle">{{item.name}}</view>
+                <view class="td conts">{{item.text}}</view>
+                <!-- <view bindtap="change" class="state">{{isFolded?'展开':'收起'}}</view>   -->
+              </view>
+						</view>
+            <view class="time-report"><text>董监高简介</text></view>
+            <view  wx:for="{{directorsIntro}}" wx:key="{{item.id}}" class="directorsIntro">
+              <image src="{{item.url}}" class="avatar"></image>
+              <view class="content">
+                <text class="directorName">{{item.name}}</text>
+                <text class="positionName">{{item.position}}</text>
+                <text class="positionSalary">年薪：{{item.salary}}</text>
+                <text class="positionDesc">
+                  {{item.desc}}
+                </text>
+              </view>
+						</view>
+					</view>
+				</view>
+				<!-- <view class="tab-panel">
+					
+				</view> -->
+			</view>
+		</view>
+	</view>
+</view>
+<!-- footerbar的实现 -->
+<view class="footerbar">
+    <view class="left nav_box">
+      <button class="share" bindtap="share">分享</button>
+    </view>
+    <view class="right nav_box">
+      <block wx:for="{{navData}}" wx:key="" class="right_nav">
+        <template is="nav" data="{{...item}}"/>
+      </block>
+    </view>
+</view>
